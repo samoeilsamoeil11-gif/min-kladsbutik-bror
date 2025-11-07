@@ -5,10 +5,10 @@ Syftet är att visa förståelse för semantisk struktur, tillgänglighet, och m
 
 Demo
 Länk till sidan:  
-[min klädsbutik bror på GitHub Pages](https://DITT-ANVÄNDARNAMN.github.io/min-kladsbutik-bror/)
+[min klädsbutik bror på GitHub Pages](https://samoeilsamoeil11-gif.github.io/min-kladsbutik-bror/)
 
 Skärmdumpar
-![Desktopversion](images/desktop.png)
+[Desktopversion](images/desktop.png)
 
 ![Mobilversion](images/mobile.png)
 
