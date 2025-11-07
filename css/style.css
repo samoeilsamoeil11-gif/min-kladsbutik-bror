@@ -1,0 +1,261 @@
+/* =====================
+   Grundinställningar
+===================== */
+:root {
+  --primar-farg: #222;
+  --sekundar-farg: #c59d5f;
+  --bakgrund: #f8f8f8;
+  --text: #333;
+  --mellanrum: 1rem;
+  --font: Arial, Helvetica, sans-serif;
+}
+
+/* =====================
+   Allmänt
+===================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bakgrund);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* =====================
+   Tillgänglighet
+===================== */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primar-farg);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--sekundar-farg);
+  outline-offset: 2px;
+}
+
+/* =====================
+   Header & meny
+===================== */
+header {
+  background: var(--primar-farg);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 3px;
+}
+
+nav a:hover {
+  background: var(--sekundar-farg);
+  color: black;
+}
+
+nav a.active {
+  background: var(--sekundar-farg);
+  color: black;
+}
+
+/* =====================
+   Innehåll
+===================== */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--mellanrum);
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h1, h2, h3 {
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  color: var(--primar-farg);
+}
+
+/* =====================
+   Hero / välkomstdel
+===================== */
+.hero {
+  background: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+/* =====================
+   Produktgalleri (Grid)
+===================== */
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.menu-item {
+  background: white;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.menu-item:hover {
+  transform: scale(1.02);
+}
+
+.menu-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  color: var(--sekundar-farg);
+  font-weight: bold;
+}
+
+/* =====================
+   FAQ / Details
+===================== */
+details {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* =====================
+   Formulär
+===================== */
+form {
+  background: white;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background: var(--sekundar-farg);
+  color: black;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #b38a44;
+}
+
+/* =====================
+   Footer
+===================== */
+footer {
+  background: var(--primar-farg);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: var(--sekundar-farg);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* =====================
+   Responsivitet
+===================== */
+@media (min-width: 600px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .menu-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* =====================
+   Minska animationer
+===================== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
