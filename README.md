@@ -44,10 +44,10 @@ CSS-interaktivitet (utan JavaScript)
 Jag har använt två CSS-baserade lösningar:
 
 1. FAQ-sektion med <details> och <summary>
-   → öppnas och stängs utan JavaScript.
+öppnas och stängs utan JavaScript.
 
 2. Hover-effekter på korten (produkter)
-   → korten får skugga och lyfts upp när man hovrar över dem.
+korten får skugga och lyfts upp när man hovrar över dem.
 
 Båda fungerar med tangentbord och skärmläsare.
 
