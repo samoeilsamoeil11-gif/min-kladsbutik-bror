@@ -8,9 +8,9 @@ Länk till sidan:
 [min klädsbutik bror på GitHub Pages](https://samoeilsamoeil11-gif.github.io/min-kladsbutik-bror/)
 
 Skärmdumpar
-[Desktopversion](images/desktop.png)
+[Desktopversion](images/desktop.png.png)
 
-![Mobilversion](images/mobile.png)
+![Mobilversion](images/mobile.png.png)
 
 Designbeslut
 
