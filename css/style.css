@@ -1,5 +1,5 @@
 /* =====================
-   Grundinställningar
+   1) Grundinställningar (CSS-variabler)
 ===================== */
 :root {
   --primar-farg: #222;
@@ -11,7 +11,7 @@
 }
 
 /* =====================
-   Allmänt
+   2) Reset + bas
 ===================== */
 * {
   box-sizing: border-box;
@@ -28,14 +28,14 @@ body {
 }
 
 /* =====================
-   Tillgänglighet
+   3) Tillgänglighet
 ===================== */
 .skip-link {
   position: absolute;
   top: -40px;
   left: 0;
   background: var(--primar-farg);
-  color: white;
+  color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 4px;
 }
@@ -44,20 +44,35 @@ body {
   top: 10px;
 }
 
+/* Skärmläsar-text (används i index.html) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Tydlig fokusstil */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
-textarea:focus-visible {
+textarea:focus-visible,
+summary:focus-visible {
   outline: 3px solid var(--sekundar-farg);
   outline-offset: 2px;
 }
 
 /* =====================
-   Header & meny
+   4) Header & navigation
 ===================== */
 header {
   background: var(--primar-farg);
-  color: white;
+  color: #fff;
   text-align: center;
   padding: 1rem;
 }
@@ -72,24 +87,20 @@ nav ul {
 }
 
 nav a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   padding: 0.4rem 0.8rem;
   border-radius: 3px;
 }
 
-nav a:hover {
-  background: var(--sekundar-farg);
-  color: black;
-}
-
+nav a:hover,
 nav a.active {
   background: var(--sekundar-farg);
-  color: black;
+  color: #000;
 }
 
 /* =====================
-   Innehåll
+   5) Layout / innehåll
 ===================== */
 main {
   max-width: 1000px;
@@ -101,7 +112,9 @@ section {
   margin-bottom: 2rem;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin-bottom: 0.5rem;
 }
 
@@ -109,20 +122,30 @@ h2 {
   color: var(--primar-farg);
 }
 
+/* Sökfält */
+#search {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.6rem;
+  margin: 0.5rem 0 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
 /* =====================
-   Hero / välkomstdel
+   6) Hero
 ===================== */
 .hero {
-  background: white;
+  background: #fff;
   text-align: center;
   padding: 2rem 1rem;
   border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
 }
 
 /* =====================
-   Produktgalleri (Grid)
+   7) Produktgalleri (CSS Grid)
 ===================== */
 .menu-grid {
   display: grid;
@@ -131,11 +154,11 @@ h2 {
 }
 
 .menu-item {
-  background: white;
+  background: #fff;
   padding: 1rem;
   border-radius: 6px;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
 }
 
@@ -155,11 +178,17 @@ h2 {
   font-weight: bold;
 }
 
+/* Markering (när man klickar på produkt) */
+.menu-item.selected {
+  outline: 3px solid #000;
+  background-color: #f5f5f5;
+}
+
 /* =====================
-   FAQ / Details
+   8) FAQ (details/summary)
 ===================== */
 details {
-  background: white;
+  background: #fff;
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 0.5rem 1rem;
@@ -172,13 +201,13 @@ summary {
 }
 
 /* =====================
-   Formulär
+   9) Formulär
 ===================== */
 form {
-  background: white;
+  background: #fff;
   padding: 1rem;
   border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -189,7 +218,8 @@ label {
   font-weight: bold;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 0.5rem;
   margin-bottom: 1rem;
@@ -199,7 +229,7 @@ input, textarea {
 
 button {
   background: var(--sekundar-farg);
-  color: black;
+  color: #000;
   border: none;
   padding: 0.6rem 1.2rem;
   border-radius: 4px;
@@ -211,11 +241,11 @@ button:hover {
 }
 
 /* =====================
-   Footer
+   10) Footer
 ===================== */
 footer {
   background: var(--primar-farg);
-  color: white;
+  color: #fff;
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
@@ -231,7 +261,7 @@ footer a:hover {
 }
 
 /* =====================
-   Responsivitet
+   11) Responsivitet
 ===================== */
 @media (min-width: 600px) {
   .menu-grid {
@@ -252,7 +282,7 @@ footer a:hover {
 }
 
 /* =====================
-   Minska animationer
+   12) Minska animationer
 ===================== */
 @media (prefers-reduced-motion: reduce) {
   * {
