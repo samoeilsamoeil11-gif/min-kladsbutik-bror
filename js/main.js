@@ -102,6 +102,12 @@ if (contactForm) {
   const nameInput = document.querySelector("#name");
   const messageInput = document.querySelector("#message");
   const formMessage = document.querySelector("#formMessage");
+  
+  // Hämta sparat namn från localStorage (om det finns)
+  const savedName = localStorage.getItem("savedName");
+  if (savedName) {
+    nameInput.value = savedName;
+  }
 
   contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -114,10 +120,12 @@ if (contactForm) {
       return;
     }
 
-    formMessage.textContent = "Tack! Ditt meddelande är skickat ✅";
+formMessage.textContent = "Tack! Ditt meddelande är skickat ✅";
 
-    // Success state: töm fälten
-    nameInput.value = "";
-    messageInput.value = "";
+// Spara namn i localStorage
+localStorage.setItem("savedName", nameValue);
+
+nameInput.value = "";
+messageInput.value = "";
   });
 }
